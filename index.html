@@ -27,7 +27,19 @@ const observer = new IntersectionObserver(entries => {
 
 hiddenElements.forEach(el => observer.observe(el));
 </script>
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
 
+document.querySelectorAll(".hidden").forEach(el => {
+  observer.observe(el);
+});
+</script>
 body {
     font-family: "Times New Roman", serif;
     background: linear-gradient(135deg, #e6f4ff, #f3e8ff, #ffeaf4);
