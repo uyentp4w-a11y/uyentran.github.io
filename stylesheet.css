@@ -1,191 +1,181 @@
-/* =========================
-   RESET
-========================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+/* =====================
+   GLOBAL THEME
+===================== */
 
 body {
-    font-family: "Times New Roman", serif;
-    background: linear-gradient(135deg, #e6f4ff, #f3e8ff, #ffeaf4);
-    color: #1e293b;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #5f6db3, #8a6ecf, #d38acb);
+    color: #1e1e2f;
 }
 
-/* =========================
-   NAVBAR (Đổi màu mới)
-========================= */
+section {
+    padding: 60px 8%;
+}
+
+/* Section background box */
+.section-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
 nav {
-    position: fixed;
-    width: 100%;
+    background: linear-gradient(90deg, #4c5db3, #a064d6);
+    padding: 18px 8%;
+    position: sticky;
     top: 0;
-    background: linear-gradient(90deg, #bfdbfe, #ddd6fe, #fbcfe8);
-    padding: 16px 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     z-index: 1000;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    list-style: none;
-}
-
 nav a {
+    color: white;
+    margin-right: 25px;
     text-decoration: none;
-    color: #1e293b;
     font-weight: 500;
-    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #6d28d9;
+    opacity: 0.7;
 }
 
-/* =========================
-   SECTION (Giảm khoảng cách)
-========================= */
-section {
-    min-height: auto;
-    padding: 100px 10% 80px 10%;
+/* =====================
+   ABOUT ME
+===================== */
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
 }
 
-.container {
-    width: 85%;
-    margin: auto;
+.about-text {
+    flex: 1;
 }
 
-.center {
-    text-align: center;
+.about-image {
+    flex: 1;
+    text-align: right;
 }
 
-/* =========================
-   PROFILE
-========================= */
-.profile-img {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 6px solid white;
-    box-shadow: 0 12px 30px rgba(124,58,237,0.2);
+.about-image img {
+    width: 250px;
+    border-radius: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-/* =========================
-   TYPOGRAPHY
-========================= */
-h1 {
-    font-size: 46px;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #7c3aed;
-}
-
-h3 {
-    font-size: 42px;
-    color: #6d28d9;
-}
-
-h4 {
-    margin: 10px 0;
-}
-
-p {
-    font-size: 17px;
-    line-height: 1.7;
-}
-
-/* =========================
+/* =====================
    PROJECT CARDS
-========================= */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+===================== */
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .card {
-    padding: 25px;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.7);
-    box-shadow: 0 8px 25px rgba(124,58,237,0.08);
-    transition: 0.4s ease;
+    flex: 1;
+    min-width: 250px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(219,39,119,0.15);
 }
 
-/* =========================
-   MBTI GRID (INTJ mới)
-========================= */
-.mbti-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+/* =====================
+   INTJ SECTION
+===================== */
+
+.intj-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.mbti-box {
-    padding: 25px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #dbeafe, #ede9fe, #fce7f3);
-    box-shadow: 0 12px 30px rgba(124,58,237,0.12);
-    text-align: center;
-    transition: 0.4s ease;
+.intj-box {
+    flex: 1;
+    min-width: 220px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.mbti-box hr {
-    margin: 10px auto;
-    width: 40px;
-    border: 1px solid #6d28d9;
-}
-
-.mbti-box:hover {
-    transform: translateY(-8px);
-}
-
-/* =========================
-   INTERESTS
-========================= */
-.interest-box p {
+.intj-title {
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 10px;
-    transition: 0.3s;
 }
 
-.interest-box p:hover {
-    transform: translateX(6px);
-    color: #7c3aed;
+.intj-title span {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    color: #777;
+    border-top: 2px solid #8a6ecf;
+    padding-top: 6px;
+    margin-top: 6px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-footer {
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
-    background: rgba(255,255,255,0.6);
+/* =====================
+   INTERESTS (SO LE)
+===================== */
+
+.interest-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 30px;
 }
 
-/* =========================
-   FLOAT IN EFFECT
-========================= */
-.reveal {
+.interest-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.interest-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.interest-text {
+    flex: 1;
+}
+
+/* =====================
+   FLOAT IN ANIMATION
+===================== */
+
+.hidden {
     opacity: 0;
-    transform: translateY(70px);
-    transition: all 1s ease;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
 }
 
-.reveal.active {
+.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* =====================
+   CONTACT
+===================== */
+
+.contact p {
+    margin: 8px 0;
 }
