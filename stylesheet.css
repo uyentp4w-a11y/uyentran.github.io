@@ -496,3 +496,24 @@ section {
         0 20px 40px rgba(0,0,0,0.35),
         0 0 25px rgba(255,255,255,0.4);
 }
+/* ===== INTRO PROFILE IMAGE ===== */
+
+#home img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+
+    border-radius: 50%;      /* làm tròn */
+    border: 8px solid white; /* viền trắng */
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.35),
+        0 0 25px rgba(255,255,255,0.4);
+
+    margin-bottom: 20px;
+    transition: 0.4s ease;
+}
+
+#home img:hover {
+    transform: translateY(-10px) scale(1.05);
+}
