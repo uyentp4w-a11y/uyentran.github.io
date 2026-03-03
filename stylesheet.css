@@ -190,3 +190,7 @@ nav a:hover {
 .contact p {
     margin: 6px 0;
 }
+* {
+    opacity: 1 !important;
+    color: black !important;
+}
