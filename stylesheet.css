@@ -323,3 +323,114 @@ section h2 {
         height: auto;
     }
 }
+/* =========================
+   INTJ SECTION
+========================= */
+
+.intj-card {
+    max-width: 1100px;
+    margin: 50px auto 0 auto;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.intj-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.intj-box {
+    background: rgba(255,255,255,0.15);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.intj-box h3 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.intj-box p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.intj-box:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.25);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .intj-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* =========================
+   PROJECT SECTION
+========================= */
+
+.project-card {
+    max-width: 1100px;
+    margin: 50px auto 0 auto;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-box {
+    height: 280px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.project-overlay h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.project-overlay p {
+    font-size: 14px;
+}
+
+.project-box:hover .project-overlay {
+    background: rgba(0,0,0,0.6);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
