@@ -484,3 +484,22 @@ section h2 {
 section {
     text-align: center;
 }
+/* ===== PROFILE IMAGE CIRCLE STYLE ===== */
+
+.about-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.35),
+        0 0 25px rgba(255,255,255,0.4);
+
+    transition: 0.4s ease;
+}
+
+.about-image img:hover {
+    transform: translateY(-10px) scale(1.05);
+}
