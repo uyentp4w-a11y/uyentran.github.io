@@ -101,10 +101,10 @@ nav a:hover {
    INTJ SECTION
 ===================== */
 
-.intj-container {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
+.personality-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
 .intj-box {
