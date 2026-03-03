@@ -1,3 +1,6 @@
+/* =========================
+   RESET & GLOBAL
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -11,15 +14,17 @@ body {
     color: #1e293b;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 nav {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
     padding: 18px 0;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     z-index: 1000;
 }
 
@@ -34,14 +39,16 @@ nav a {
     text-decoration: none;
     color: #334155;
     font-size: 16px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 nav a:hover {
     color: #7c3aed;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 section {
     min-height: 100vh;
     padding: 140px 10%;
@@ -58,18 +65,27 @@ section {
     text-align: center;
 }
 
-/* PROFILE IMAGE */
+/* =========================
+   PROFILE IMAGE
+========================= */
 .profile-img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 25px;
-    border: 5px solid rgba(255,255,255,0.7);
-    box-shadow: 0 10px 30px rgba(124,58,237,0.2);
+    border: 6px solid rgba(255,255,255,0.8);
+    box-shadow: 0 15px 35px rgba(124,58,237,0.2);
+    transition: 0.4s ease;
 }
 
-/* HEADINGS */
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
 h1 {
     font-size: 50px;
     margin-bottom: 10px;
@@ -81,13 +97,19 @@ h2 {
     color: #6d28d9;
 }
 
+h3 {
+    margin-bottom: 10px;
+}
+
 p {
     font-size: 18px;
     line-height: 1.8;
     max-width: 750px;
 }
 
-/* PROJECT CARDS */
+/* =========================
+   PROJECT CARDS
+========================= */
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -97,16 +119,19 @@ p {
 .card {
     padding: 25px;
     border-radius: 18px;
-    background: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.65);
     box-shadow: 0 10px 30px rgba(124,58,237,0.08);
     transition: 0.4s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(219,39,119,0.15);
 }
 
-/* MBTI SECTION */
+/* =========================
+   MBTI SECTION
+========================= */
 .mbti-card {
     padding: 30px;
     border-radius: 20px;
@@ -119,24 +144,48 @@ p {
     padding-left: 20px;
 }
 
-/* INTERESTS */
+.mbti-card li {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   INTERESTS
+========================= */
 .interest-box p {
     margin-bottom: 12px;
     font-size: 18px;
+    transition: 0.3s ease;
 }
 
-/* FOOTER */
+.interest-box p:hover {
+    transform: translateX(8px);
+    color: #7c3aed;
+}
+
+/* =========================
+   CONTACT
+========================= */
+#contact p {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
     text-align: center;
     padding: 30px;
     background: rgba(255,255,255,0.7);
+    font-size: 14px;
 }
 
-/* FLOAT-IN EFFECT */
+/* =========================
+   FLOAT-IN EFFECT
+========================= */
 .reveal {
     opacity: 0;
-    transform: translateY(80px) scale(0.98);
-    transition: all 1.1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transform: translateY(100px) scale(0.95);
+    transition: all 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 .reveal.active {
