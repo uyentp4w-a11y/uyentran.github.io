@@ -5,21 +5,21 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #5f6db3, #8a6ecf, #d38acb);
-    color: #1e1e2f;
+    background: linear-gradient(135deg, #4e5fbf, #7a6ed6, #c86dd7);
+    color: #1c1c2e;
 }
 
 section {
-    padding: 60px 8%;
+    padding: 40px 8%;   /* Giảm khoảng cách giữa các section */
 }
 
 /* Section background box */
 .section-box {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(12px);
-    padding: 50px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    padding: 40px;
     border-radius: 25px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
 /* =====================
@@ -27,8 +27,8 @@ section {
 ===================== */
 
 nav {
-    background: linear-gradient(90deg, #4c5db3, #a064d6);
-    padding: 18px 8%;
+    background: linear-gradient(90deg, #4457c4, #a45dd6);
+    padding: 16px 8%;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -39,10 +39,11 @@ nav a {
     margin-right: 25px;
     text-decoration: none;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    opacity: 0.7;
+    opacity: 0.75;
 }
 
 /* =====================
@@ -53,7 +54,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 50px;
 }
 
 .about-text {
@@ -62,13 +63,14 @@ nav a:hover {
 
 .about-image {
     flex: 1;
-    text-align: right;
+    display: flex;
+    justify-content: center;
 }
 
 .about-image img {
-    width: 250px;
-    border-radius: 25px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    width: 280px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
 }
 
 /* =====================
@@ -77,22 +79,22 @@ nav a:hover {
 
 .card-container {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 .card {
     flex: 1;
-    min-width: 250px;
+    min-width: 260px;
     background: white;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
     transition: 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
 }
 
 /* =====================
@@ -101,7 +103,7 @@ nav a:hover {
 
 .intj-container {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
@@ -109,23 +111,28 @@ nav a:hover {
     flex: 1;
     min-width: 220px;
     background: white;
-    padding: 30px;
+    padding: 28px;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+}
+
+.intj-box:hover {
+    transform: translateY(-8px);
 }
 
 .intj-title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .intj-title span {
     display: block;
     font-size: 14px;
     font-weight: normal;
-    color: #777;
-    border-top: 2px solid #8a6ecf;
+    color: #666;
+    border-top: 2px solid #7a6ed6;
     padding-top: 6px;
     margin-top: 6px;
 }
@@ -137,8 +144,8 @@ nav a:hover {
 .interest-item {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
-    gap: 30px;
+    gap: 35px;
+    margin-bottom: 50px;
 }
 
 .interest-item.reverse {
@@ -146,15 +153,19 @@ nav a:hover {
 }
 
 .interest-item img {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
 }
 
 .interest-text {
     flex: 1;
+}
+
+.interest-text h3 {
+    margin-bottom: 8px;
 }
 
 /* =====================
@@ -163,8 +174,8 @@ nav a:hover {
 
 .hidden {
     opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
+    transform: translateY(50px);
+    transition: all 0.9s ease;
 }
 
 .show {
@@ -177,5 +188,5 @@ nav a:hover {
 ===================== */
 
 .contact p {
-    margin: 8px 0;
+    margin: 6px 0;
 }
