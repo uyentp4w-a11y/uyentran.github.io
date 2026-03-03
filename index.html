@@ -4,238 +4,132 @@
     <meta charset="UTF-8">
     <title>Tran Phuong Uyen | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0f172a;
-            color: white;
-        }
-
-        /* ===== NAVBAR ===== */
-        nav {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        /* ===== SECTIONS ===== */
-        section {
-            min-height: 100vh;
-            padding: 120px 10%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #38bdf8;
-        }
-
-        p {
-            max-width: 700px;
-            line-height: 1.7;
-            margin-bottom: 20px;
-            color: #cbd5e1;
-        }
-
-        /* ===== HOME ===== */
-        #home {
-            align-items: center;
-            text-align: center;
-        }
-
-        #home span {
-            color: #38bdf8;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            border-radius: 30px;
-            background-color: #38bdf8;
-            color: #0f172a;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background-color: white;
-        }
-
-        /* ===== PROJECTS ===== */
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .card {
-            background: #1e293b;
-            padding: 25px;
-            border-radius: 15px;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            background: #334155;
-        }
-
-        /* ===== CONTACT ===== */
-        form {
-            max-width: 500px;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            border: none;
-            outline: none;
-        }
-
-        textarea {
-            resize: none;
-            height: 120px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #0f172a;
-            color: #94a3b8;
-        }
-
-        /* Fade animation */
-        .fade {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1s ease forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
 <nav>
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#personality">Personality</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#interests">Interests</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<!-- ===== HOME ===== -->
-<section id="home">
-    <div class="fade">
-        <h1>Hi, I'm <span>Tran Phuong Uyen</span></h1>
-        <p>HR Enthusiast | Recruitment-oriented | Exchange Student at Hitotsubashi University</p>
-        <a href="#contact" class="btn">Contact Me</a>
+<!-- HOME -->
+<section id="home" class="reveal">
+    <div class="container center">
+        <img src="profile.jpg" alt="Profile" class="profile-img">
+        <h1>Tran Phuong Uyen</h1>
+        <h2>Human Resources | Recruitment | Growth Mindset Advocate</h2>
+        <p>Aspiring HR professional with strong analytical mindset and passion for talent development.</p>
     </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
-<section id="about">
-    <div class="fade">
+<!-- ABOUT -->
+<section id="about" class="reveal">
+    <div class="container">
         <h2>About Me</h2>
         <p>
-            I am passionate about Human Resources, especially Recruitment.
-            I enjoy connecting people, building networks, and developing growth mindset initiatives.
-        </p>
-        <p>
-            Currently preparing for my exchange program in Japan and building my professional portfolio.
+            I am pursuing a career in Human Resources, particularly in Recruitment.
+            With experience in research, workshop organization, and data analysis,
+            I aim to contribute strategic value to organizations.
         </p>
     </div>
 </section>
 
-<!-- ===== PROJECTS ===== -->
-<section id="projects">
-    <div class="fade">
+<!-- PERSONALITY -->
+<section id="personality" class="reveal">
+    <div class="container">
+        <h2>Personality – INTJ</h2>
+        <div class="mbti-card">
+            <h3>INTJ – The Architect</h3>
+            <p>
+                Strategic, independent and analytical. I prefer long-term vision over short-term comfort,
+                enjoy solving complex problems, and constantly seek improvement.
+            </p>
+            <ul>
+                <li>✔ Strong strategic thinking</li>
+                <li>✔ Logical decision-making</li>
+                <li>✔ High personal standards</li>
+                <li>✔ Continuous self-development mindset</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+    <div class="container">
         <h2>Projects</h2>
         <div class="projects">
             <div class="card">
                 <h3>Mindset Switch Workshop</h3>
-                <p>Online workshop helping students shift from fixed to growth mindset.</p>
+                <p>Designed and facilitated an online workshop focused on Growth Mindset and Networking.</p>
             </div>
 
             <div class="card">
-                <h3>HR Research Report</h3>
-                <p>Training effectiveness evaluation and needs analysis project.</p>
+                <h3>HR Training Effectiveness Research</h3>
+                <p>Conducted evaluation and needs analysis using data-driven approach.</p>
             </div>
 
             <div class="card">
                 <h3>Sales Pipeline Analysis</h3>
-                <p>Data-driven insights to improve closing rate strategy.</p>
+                <p>Provided insights to improve closing rate strategy.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact">
-    <div class="fade">
-        <h2>Contact Me</h2>
-        <p>Email: uyentran25052006@gmail.com</p>
+<!-- INTERESTS -->
+<section id="interests" class="reveal">
+    <div class="container">
+        <h2>Interests</h2>
+        <div class="interest-box">
+            <p>📚 Reading psychology & business books</p>
+            <p>🌏 Cultural exchange & international learning</p>
+            <p>📊 Data-driven HR practices</p>
+            <p>🎤 Public speaking & workshop facilitation</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Email: yourmail@gmail.com</p>
+        <p>Phone: 0xxx xxx xxx</p>
         <p>LinkedIn: linkedin.com/in/yourname</p>
+        <p>Facebook: facebook.com/yourname</p>
     </div>
 </section>
 
 <footer>
-    © 2026 Tran Phuong Uyen. All rights reserved.
+    © 2026 Tran Phuong Uyen
 </footer>
+
+<script>
+function reveal() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach(element => {
+        const windowHeight = window.innerHeight;
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 100;
+
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", reveal);
+</script>
 
 </body>
 </html>
