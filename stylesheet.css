@@ -1,5 +1,5 @@
 /* =========================
-   RESET & GLOBAL
+   RESET
 ========================= */
 * {
     margin: 0;
@@ -15,45 +15,42 @@ body {
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (Đổi màu mới)
 ========================= */
 nav {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    padding: 18px 0;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(90deg, #bfdbfe, #ddd6fe, #fbcfe8);
+    padding: 16px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     z-index: 1000;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
-    gap: 35px;
+    gap: 30px;
     list-style: none;
 }
 
 nav a {
     text-decoration: none;
-    color: #334155;
-    font-size: 16px;
-    transition: 0.3s ease;
+    color: #1e293b;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #7c3aed;
+    color: #6d28d9;
 }
 
 /* =========================
-   SECTIONS
+   SECTION (Giảm khoảng cách)
 ========================= */
 section {
-    min-height: 100vh;
-    padding: 140px 10%;
-    display: flex;
-    align-items: center;
+    min-height: auto;
+    padding: 100px 10% 80px 10%;
 }
 
 .container {
@@ -66,45 +63,44 @@ section {
 }
 
 /* =========================
-   PROFILE IMAGE
+   PROFILE
 ========================= */
 .profile-img {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 25px;
-    border: 6px solid rgba(255,255,255,0.8);
-    box-shadow: 0 15px 35px rgba(124,58,237,0.2);
-    transition: 0.4s ease;
-}
-
-.profile-img:hover {
-    transform: scale(1.05);
+    margin-bottom: 20px;
+    border: 6px solid white;
+    box-shadow: 0 12px 30px rgba(124,58,237,0.2);
 }
 
 /* =========================
    TYPOGRAPHY
 ========================= */
 h1 {
-    font-size: 50px;
+    font-size: 46px;
     margin-bottom: 10px;
 }
 
 h2 {
-    font-size: 30px;
-    margin-bottom: 25px;
-    color: #6d28d9;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #7c3aed;
 }
 
 h3 {
-    margin-bottom: 10px;
+    font-size: 42px;
+    color: #6d28d9;
+}
+
+h4 {
+    margin: 10px 0;
 }
 
 p {
-    font-size: 18px;
-    line-height: 1.8;
-    max-width: 750px;
+    font-size: 17px;
+    line-height: 1.7;
 }
 
 /* =========================
@@ -113,60 +109,61 @@ p {
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 25px;
 }
 
 .card {
     padding: 25px;
     border-radius: 18px;
-    background: rgba(255,255,255,0.65);
-    box-shadow: 0 10px 30px rgba(124,58,237,0.08);
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0 8px 25px rgba(124,58,237,0.08);
     transition: 0.4s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(219,39,119,0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(219,39,119,0.15);
 }
 
 /* =========================
-   MBTI SECTION
+   MBTI GRID (INTJ mới)
 ========================= */
-.mbti-card {
-    padding: 30px;
-    border-radius: 20px;
+.mbti-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.mbti-box {
+    padding: 25px;
+    border-radius: 18px;
     background: linear-gradient(135deg, #dbeafe, #ede9fe, #fce7f3);
-    box-shadow: 0 15px 40px rgba(124,58,237,0.1);
+    box-shadow: 0 12px 30px rgba(124,58,237,0.12);
+    text-align: center;
+    transition: 0.4s ease;
 }
 
-.mbti-card ul {
-    margin-top: 15px;
-    padding-left: 20px;
+.mbti-box hr {
+    margin: 10px auto;
+    width: 40px;
+    border: 1px solid #6d28d9;
 }
 
-.mbti-card li {
-    margin-bottom: 8px;
+.mbti-box:hover {
+    transform: translateY(-8px);
 }
 
 /* =========================
    INTERESTS
 ========================= */
 .interest-box p {
-    margin-bottom: 12px;
-    font-size: 18px;
-    transition: 0.3s ease;
+    margin-bottom: 10px;
+    transition: 0.3s;
 }
 
 .interest-box p:hover {
-    transform: translateX(8px);
+    transform: translateX(6px);
     color: #7c3aed;
-}
-
-/* =========================
-   CONTACT
-========================= */
-#contact p {
-    margin-bottom: 10px;
 }
 
 /* =========================
@@ -174,21 +171,21 @@ p {
 ========================= */
 footer {
     text-align: center;
-    padding: 30px;
-    background: rgba(255,255,255,0.7);
-    font-size: 14px;
+    padding: 25px;
+    margin-top: 40px;
+    background: rgba(255,255,255,0.6);
 }
 
 /* =========================
-   FLOAT-IN EFFECT
+   FLOAT IN EFFECT
 ========================= */
 .reveal {
     opacity: 0;
-    transform: translateY(100px) scale(0.95);
-    transition: all 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transform: translateY(70px);
+    transition: all 1s ease;
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
 }
