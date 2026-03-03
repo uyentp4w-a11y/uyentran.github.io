@@ -1,134 +1,273 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Tran Phuong Uyen | Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tran Phuong Uyen | Portfolio</title>
+
+<style>
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Times New Roman", serif;
+    background: linear-gradient(135deg, #e6f4ff, #f3e8ff, #ffeaf4);
+    color: #1e293b;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(12px);
+    padding: 18px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #334155;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #7c3aed;
+}
+
+/* ===== SECTION ===== */
+section {
+    min-height: 100vh;
+    padding: 140px 10%;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border: 6px solid rgba(255,255,255,0.8);
+    box-shadow: 0 15px 35px rgba(124,58,237,0.2);
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #6d28d9;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 750px;
+}
+
+/* ===== PROJECT CARDS ===== */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.6);
+    box-shadow: 0 10px 30px rgba(124,58,237,0.08);
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* ===== MBTI ===== */
+.mbti-card {
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #dbeafe, #ede9fe, #fce7f3);
+    box-shadow: 0 15px 40px rgba(124,58,237,0.1);
+}
+
+.mbti-card ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+/* ===== INTERESTS ===== */
+.interest-box p {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255,255,255,0.7);
+}
+
+/* ===== FLOAT IN EFFECT (PowerPoint Style) ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(100px) scale(0.95);
+    transition: all 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+</style>
 </head>
 
 <body>
 
 <nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#personality">Personality</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#interests">Interests</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#personality">Personality</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#interests">Interests</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
-<!-- HOME -->
 <section id="home" class="reveal">
-    <div class="container center">
-        <img src="profile.jpg" alt="Profile" class="profile-img">
-        <h1>Tran Phuong Uyen</h1>
-        <h2>Human Resources | Recruitment | Growth Mindset Advocate</h2>
-        <p>Aspiring HR professional with strong analytical mindset and passion for talent development.</p>
-    </div>
+<div class="container center">
+<img src="profile.jpg" alt="Profile" class="profile-img">
+<h1>Tran Phuong Uyen</h1>
+<h2>Human Resources | Recruitment | Growth Mindset Advocate</h2>
+<p>Aspiring HR professional with strong analytical mindset and passion for talent development.</p>
+</div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="reveal">
-    <div class="container">
-        <h2>About Me</h2>
-        <p>
-            I am pursuing a career in Human Resources, particularly in Recruitment.
-            With experience in research, workshop organization, and data analysis,
-            I aim to contribute strategic value to organizations.
-        </p>
-    </div>
+<div class="container">
+<h2>About Me</h2>
+<p>
+I am pursuing a career in Human Resources, particularly in Recruitment.
+With experience in research, workshop organization, and data analysis,
+I aim to contribute strategic value to organizations.
+</p>
+</div>
 </section>
 
-<!-- PERSONALITY -->
 <section id="personality" class="reveal">
-    <div class="container">
-        <h2>Personality – INTJ</h2>
-        <div class="mbti-card">
-            <h3>INTJ – The Architect</h3>
-            <p>
-                Strategic, independent and analytical. I prefer long-term vision over short-term comfort,
-                enjoy solving complex problems, and constantly seek improvement.
-            </p>
-            <ul>
-                <li>✔ Strong strategic thinking</li>
-                <li>✔ Logical decision-making</li>
-                <li>✔ High personal standards</li>
-                <li>✔ Continuous self-development mindset</li>
-            </ul>
-        </div>
-    </div>
+<div class="container">
+<h2>Personality – INTJ</h2>
+<div class="mbti-card">
+<h3>INTJ – The Architect</h3>
+<p>
+Strategic, independent and analytical. I prefer long-term vision over short-term comfort,
+enjoy solving complex problems, and constantly seek improvement.
+</p>
+<ul>
+<li>✔ Strong strategic thinking</li>
+<li>✔ Logical decision-making</li>
+<li>✔ High personal standards</li>
+<li>✔ Continuous self-development mindset</li>
+</ul>
+</div>
+</div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects" class="reveal">
-    <div class="container">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="card">
-                <h3>Mindset Switch Workshop</h3>
-                <p>Designed and facilitated an online workshop focused on Growth Mindset and Networking.</p>
-            </div>
-
-            <div class="card">
-                <h3>HR Training Effectiveness Research</h3>
-                <p>Conducted evaluation and needs analysis using data-driven approach.</p>
-            </div>
-
-            <div class="card">
-                <h3>Sales Pipeline Analysis</h3>
-                <p>Provided insights to improve closing rate strategy.</p>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<h2>Projects</h2>
+<div class="projects">
+<div class="card">
+<h3>Mindset Switch Workshop</h3>
+<p>Designed and facilitated an online workshop focused on Growth Mindset and Networking.</p>
+</div>
+<div class="card">
+<h3>HR Training Effectiveness Research</h3>
+<p>Conducted evaluation and needs analysis using data-driven approach.</p>
+</div>
+<div class="card">
+<h3>Sales Pipeline Analysis</h3>
+<p>Provided insights to improve closing rate strategy.</p>
+</div>
+</div>
+</div>
 </section>
 
-<!-- INTERESTS -->
 <section id="interests" class="reveal">
-    <div class="container">
-        <h2>Interests</h2>
-        <div class="interest-box">
-            <p>📚 Reading psychology & business books</p>
-            <p>🌏 Cultural exchange & international learning</p>
-            <p>📊 Data-driven HR practices</p>
-            <p>🎤 Public speaking & workshop facilitation</p>
-        </div>
-    </div>
+<div class="container">
+<h2>Interests</h2>
+<div class="interest-box">
+<p>📚 Reading psychology & business books</p>
+<p>🌏 Cultural exchange & international learning</p>
+<p>📊 Data-driven HR practices</p>
+<p>🎤 Public speaking & workshop facilitation</p>
+</div>
+</div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="reveal">
-    <div class="container">
-        <h2>Contact</h2>
-        <p>Email: yourmail@gmail.com</p>
-        <p>Phone: 0xxx xxx xxx</p>
-        <p>LinkedIn: linkedin.com/in/yourname</p>
-        <p>Facebook: facebook.com/yourname</p>
-    </div>
+<div class="container">
+<h2>Contact</h2>
+<p>Email: yourmail@gmail.com</p>
+<p>Phone: 0xxx xxx xxx</p>
+<p>LinkedIn: linkedin.com/in/yourname</p>
+<p>Facebook: facebook.com/yourname</p>
+</div>
 </section>
 
 <footer>
-    © 2026 Tran Phuong Uyen
+© 2026 Tran Phuong Uyen
 </footer>
 
 <script>
 function reveal() {
     const reveals = document.querySelectorAll(".reveal");
-
     reveals.forEach(element => {
         const windowHeight = window.innerHeight;
         const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 100;
-
-        if (elementTop < windowHeight - elementVisible) {
+        if (elementTop < windowHeight - 100) {
             element.classList.add("active");
         }
     });
 }
-
 window.addEventListener("scroll", reveal);
+reveal();
 </script>
 
 </body>
