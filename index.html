@@ -4,186 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tran Phuong Uyen | Portfolio</title>
-    <link rel="stylesheet" href="stylesheet.css">
-<style>
 
-/* ===== RESET ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-    <script>
-const hiddenElements = document.querySelectorAll(".hidden");
+<link rel="stylesheet" href="stylesheet.css">
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-hiddenElements.forEach(el => observer.observe(el));
-</script>
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-});
-
-document.querySelectorAll(".hidden").forEach(el => {
-  observer.observe(el);
-});
-</script>
-body {
-    font-family: "Times New Roman", serif;
-    background: linear-gradient(135deg, #e6f4ff, #f3e8ff, #ffeaf4);
-    color: #1e293b;
-}
-
-/* ===== NAVBAR ===== */
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(255,255,255,0.85);
-    backdrop-filter: blur(12px);
-    padding: 18px 0;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    z-index: 1000;
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-    list-style: none;
-}
-
-nav a {
-    text-decoration: none;
-    color: #334155;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #7c3aed;
-}
-
-/* ===== SECTION ===== */
-section {
-    min-height: 100vh;
-    padding: 140px 10%;
-    display: flex;
-    align-items: center;
-}
-
-.container {
-    width: 85%;
-    margin: auto;
-}
-
-.center {
-    text-align: center;
-}
-
-/* ===== PROFILE IMAGE ===== */
-.profile-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 25px;
-    border: 6px solid rgba(255,255,255,0.8);
-    box-shadow: 0 15px 35px rgba(124,58,237,0.2);
-}
-
-/* ===== HEADINGS ===== */
-h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-}
-
-h2 {
-    font-size: 30px;
-    margin-bottom: 25px;
-    color: #6d28d9;
-}
-
-p {
-    font-size: 18px;
-    line-height: 1.8;
-    max-width: 750px;
-}
-
-/* ===== PROJECT CARDS ===== */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.card {
-    padding: 25px;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.6);
-    box-shadow: 0 10px 30px rgba(124,58,237,0.08);
-    transition: 0.4s ease;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-/* ===== MBTI ===== */
-.mbti-card {
-    padding: 30px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, #dbeafe, #ede9fe, #fce7f3);
-    box-shadow: 0 15px 40px rgba(124,58,237,0.1);
-}
-
-.mbti-card ul {
-    margin-top: 15px;
-    padding-left: 20px;
-}
-
-/* ===== INTERESTS ===== */
-.interest-box p {
-    margin-bottom: 12px;
-    font-size: 18px;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    text-align: center;
-    padding: 30px;
-    background: rgba(255,255,255,0.7);
-}
-
-/* ===== FLOAT IN EFFECT (PowerPoint Style) ===== */
-.reveal {
-    opacity: 0;
-    transform: translateY(100px) scale(0.95);
-    transition: all 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-}
-
-</style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
 <ul>
 <li><a href="#home">Home</a></li>
@@ -195,17 +23,29 @@ footer {
 </ul>
 </nav>
 
+
+<!-- HOME -->
 <section id="home" class="reveal">
-<div class="container center">
+<div class="section-box center">
+
 <img src="profile.jpg" alt="Profile" class="profile-img">
+
 <h1>Tran Phuong Uyen</h1>
 <h2>Human Resources | Recruitment | Growth Mindset Advocate</h2>
-<p>Aspiring HR professional with strong analytical mindset and passion for talent development.</p>
+
+<p>
+Aspiring HR professional with strong analytical mindset and passion for talent development.
+</p>
+
 </div>
 </section>
 
+
+<!-- ABOUT -->
 <section id="about" class="reveal">
-<div class="container">
+<div class="section-box about-container">
+
+<div class="about-text">
 <h2>About Me</h2>
 <p>
 I am pursuing a career in Human Resources, particularly in Recruitment.
@@ -213,39 +53,40 @@ With experience in research, workshop organization, and data analysis,
 I aim to contribute strategic value to organizations.
 </p>
 </div>
+
+<div class="about-image">
+<img src="about.jpg" alt="About Image">
+</div>
+
+</div>
 </section>
 
+
+<!-- PERSONALITY INTJ -->
 <section id="personality" class="reveal">
-<div class="container">
+<div class="section-box">
+
 <h2>Personality – INTJ</h2>
 
-<div class="mbti-grid">
+<div class="intj-container">
 
-<div class="mbti-box">
-<h3>I</h3>
-<hr>
-<h4>Introversion</h4>
+<div class="intj-box">
+<div class="intj-title">I <span>Introversion</span></div>
 <p>I prefer deep focus, independent work and meaningful conversations over large social settings.</p>
 </div>
 
-<div class="mbti-box">
-<h3>N</h3>
-<hr>
-<h4>Intuition</h4>
+<div class="intj-box">
+<div class="intj-title">N <span>Intuition</span></div>
 <p>I focus on long-term vision, strategy and patterns rather than short-term details.</p>
 </div>
 
-<div class="mbti-box">
-<h3>T</h3>
-<hr>
-<h4>Thinking</h4>
+<div class="intj-box">
+<div class="intj-title">T <span>Thinking</span></div>
 <p>I make decisions based on logic, analysis and objective reasoning.</p>
 </div>
 
-<div class="mbti-box">
-<h3>J</h3>
-<hr>
-<h4>Judging</h4>
+<div class="intj-box">
+<div class="intj-title">J <span>Judging</span></div>
 <p>I value structure, planning and clear goals in both academic and professional work.</p>
 </div>
 
@@ -253,51 +94,111 @@ I aim to contribute strategic value to organizations.
 </div>
 </section>
 
+
+<!-- PROJECTS -->
 <section id="projects" class="reveal">
-<div class="container">
+<div class="section-box">
+
 <h2>Projects</h2>
-<div class="projects">
+
+<div class="card-container">
+
 <div class="card">
 <h3>Mindset Switch Workshop</h3>
 <p>Designed and facilitated an online workshop focused on Growth Mindset and Networking.</p>
 </div>
+
 <div class="card">
 <h3>HR Training Effectiveness Research</h3>
 <p>Conducted evaluation and needs analysis using data-driven approach.</p>
 </div>
+
 <div class="card">
 <h3>Sales Pipeline Analysis</h3>
 <p>Provided insights to improve closing rate strategy.</p>
 </div>
+
 </div>
 </div>
 </section>
 
+
+<!-- INTERESTS -->
 <section id="interests" class="reveal">
-<div class="container">
+<div class="section-box">
+
 <h2>Interests</h2>
-<div class="interest-box">
-<p>📚 Reading psychology & business books</p>
-<p>🌏 Cultural exchange & international learning</p>
-<p>📊 Data-driven HR practices</p>
-<p>🎤 Public speaking & workshop facilitation</p>
+
+<div class="interest-item">
+<img src="reading.jpg" alt="Reading">
+<div class="interest-text">
+<h3>Reading Psychology & Business</h3>
+<p>I enjoy exploring psychology and strategic business thinking to better understand people and systems.</p>
 </div>
+</div>
+
+<div class="interest-item reverse">
+<img src="culture.jpg" alt="Culture">
+<div class="interest-text">
+<h3>Cultural Exchange</h3>
+<p>I’m passionate about international learning environments and cross-cultural collaboration.</p>
+</div>
+</div>
+
+<div class="interest-item">
+<img src="data.jpg" alt="Data">
+<div class="interest-text">
+<h3>Data-driven HR</h3>
+<p>I’m interested in applying analytics to recruitment and training effectiveness.</p>
+</div>
+</div>
+
+<div class="interest-item reverse">
+<img src="speaking.jpg" alt="Speaking">
+<div class="interest-text">
+<h3>Public Speaking</h3>
+<p>I love facilitating workshops and helping others develop growth mindset.</p>
+</div>
+</div>
+
 </div>
 </section>
 
+
+<!-- CONTACT -->
 <section id="contact" class="reveal">
-<div class="container">
+<div class="section-box contact">
+
 <h2>Contact</h2>
+
 <p>Email: yourmail@gmail.com</p>
 <p>Phone: 0xxx xxx xxx</p>
 <p>LinkedIn: linkedin.com/in/yourname</p>
 <p>Facebook: facebook.com/yourname</p>
+
 </div>
 </section>
+
 
 <footer>
 © 2026 Tran Phuong Uyen
 </footer>
+
+
+<!-- FLOAT IN SCRIPT -->
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+});
+
+document.querySelectorAll(".reveal").forEach(el => {
+  observer.observe(el);
+});
+</script>
 
 </body>
 </html>
