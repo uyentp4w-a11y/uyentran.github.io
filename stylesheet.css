@@ -194,3 +194,19 @@ nav a:hover {
     opacity: 1 !important;
     color: black !important;
 }
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;   /* nếu muốn menu nằm ngang */
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
